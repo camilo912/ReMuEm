@@ -15,7 +15,7 @@ Se puede solicitar el acceso a este conjunto de datos para investigación en: ht
 Este conjunto de datos puede ser descargado de: http://mypersonality.org/wiki/doku.php?id=download_databases
 
 ## Ejecución
-El orden del proyecto es el sigueinte:
+El orden del proyecto es el siguiente:
 
 -   Se descargan los datos.
 -   Se llevan a un formato estándar para el proyecto (proceso automatizado mediante scripts).
