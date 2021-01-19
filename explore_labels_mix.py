@@ -1,0 +1,51 @@
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+
+labels = np.load('data/mix/labels.npy')
+print(pd.Series(labels[:,0], name='arousal').describe())
+print(pd.Series(labels[:,1], name='valence').describe())
+
+fig, ax = plt.subplots()
+plt.plot(-1, 0, 'wo', marker=".", markersize=0)
+plt.plot(0, -1, 'wo', marker=".", markersize=0)
+plt.plot(1, 0, 'wo', marker=".", markersize=0)
+plt.plot(0, 1, 'wo', marker=".", markersize=0)
+plt.plot(0, 0, 'ko', marker="+")
+plt.plot(labels[:, 1], labels[:, 0], 'ro', label='labels', markersize=2)
+ax.add_artist(plt.Circle((0, 0), 1.0, color='k', fill=False))
+plt.gca().set_aspect('equal', adjustable='box')
+plt.legend()
+# plt.show()
+
+labels = np.load('data/mix/labels_train.npy')
+print(pd.Series(labels[:,0], name='arousal').describe())
+print(pd.Series(labels[:,1], name='valence').describe())
+
+fig, ax = plt.subplots()
+plt.plot(-1, 0, 'wo', marker=".", markersize=0)
+plt.plot(0, -1, 'wo', marker=".", markersize=0)
+plt.plot(1, 0, 'wo', marker=".", markersize=0)
+plt.plot(0, 1, 'wo', marker=".", markersize=0)
+plt.plot(0, 0, 'ko', marker="+")
+plt.plot(labels[:, 1], labels[:, 0], 'bo', label='labels', markersize=2)
+ax.add_artist(plt.Circle((0, 0), 1.0, color='k', fill=False))
+plt.gca().set_aspect('equal', adjustable='box')
+plt.legend()
+# plt.show()
+
+labels = np.load('data/mix/labels_test.npy')
+print(pd.Series(labels[:,0], name='arousal').describe())
+print(pd.Series(labels[:,1], name='valence').describe())
+
+fig, ax = plt.subplots()
+plt.plot(-1, 0, 'wo', marker=".", markersize=0)
+plt.plot(0, -1, 'wo', marker=".", markersize=0)
+plt.plot(1, 0, 'wo', marker=".", markersize=0)
+plt.plot(0, 1, 'wo', marker=".", markersize=0)
+plt.plot(0, 0, 'ko', marker="+")
+plt.plot(labels[:, 1], labels[:, 0], 'go', label='labels', markersize=2)
+ax.add_artist(plt.Circle((0, 0), 1.0, color='k', fill=False))
+plt.gca().set_aspect('equal', adjustable='box')
+plt.legend()
+plt.show()

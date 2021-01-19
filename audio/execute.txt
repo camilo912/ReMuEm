@@ -1,0 +1,1 @@
+SMILExtract -C config/IS13_ComParE.conf -I Watch\ in\ full\ The\ Queen\'s\ VE\ Day\ 2020\ address.wav -csvoutput tmp.csv -frameListFile frames_list.list
